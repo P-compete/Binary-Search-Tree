@@ -7,9 +7,47 @@ node *left,*right;};
 
 node *root=NULL;
 
-void insert(int a)
+void insert(int item)
 {
-
+     node *p,*q,*temp;
+     temp=new node();
+     temp->data=item;
+     temp->left=NULL;
+     temp->right=NULL;
+     
+     if(root==NULL)
+       {    root=temp;
+		    root->left=NULL;
+		    root->left=NULL;
+	   }
+	   
+     else
+       {
+		  p=root;
+		  q=p;
+		  while(p!=NULL)
+		   {
+			   q=p;
+			   if(item<p->data)
+			    {
+				   p=p->left;
+				}
+			   else
+			    {
+					p=p->right;
+				}
+			   
+		   }
+		  if(item<q->data)
+		   {
+			   q->left=temp;
+		   } 
+		  else
+		   {
+			   q->right=temp;
+		   } 
+	  }
+     
 }
 
 int main()
