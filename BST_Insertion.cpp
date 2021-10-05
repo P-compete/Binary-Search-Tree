@@ -28,25 +28,12 @@ void insert(int item)
 		  while(p!=NULL)
 		   {
 			   q=p;
-			   if(item<p->data)
-			    {
-				   p=p->left;
-				}
-			   else
-			    {
-					p=p->right;
-				}
-			   
-		   }
-		  if(item<q->data)
-		   {
-			   q->left=temp;
-		   } 
-		  else
-		   {
-			   q->right=temp;
-		   } 
-	  }
+			   if(item<p->data){p=p->left;}
+			   else{p=p->right;}
+			}
+		  if(item<q->data){q->left=temp;} 
+		  else{q->right=temp;} 
+	   }
      
 }
 
